@@ -41,6 +41,7 @@ public class ConfigManager {
         }
         return configMap.get(key);
     }
+
     public static Boolean isHeadless() {
         return StringUtils.isNotBlank(System.getProperty("headless")) ? Boolean.parseBoolean(System.getProperty("headless"))
                 : Boolean.parseBoolean(getConfigProperty("headless"));
@@ -89,10 +90,6 @@ public class ConfigManager {
         return getRunTimeValue(key, null);
     }
 
-
-    public static String getLocalUrl() {
-        return System.getProperty("local.url", getStringValue("local.url", "https://stage-www.supplementler.com"));
-    }
 
     public static String getTestUrlConfig() {
         return System.getProperty("testEnv", getStringValue("testEnv", "test"));

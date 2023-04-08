@@ -9,10 +9,151 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Supplementler UI Test Suite</th></tr>
-<tr><td><a href="#t0">Run Admin Tests 1</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">2,538</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Run Admin Tests 1</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">269,360</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Supplementler UI Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run Admin Tests 1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">io.cucumber.skeleton.RunCucumberTest</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1680945161110</td><td rowspan="1">1215</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Supplementler UI Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run Admin Tests 1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">io.cucumber.skeleton.RunCucumberTest</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1680985178959</td><td rowspan="1">133122</td></tr><tr><th colspan="4">Run Admin Tests 1 &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">io.cucumber.skeleton.RunCucumberTest</td><td><a href="#m1">runScenario</a></td><td rowspan="1">1680985045486</td><td rowspan="1">132981</td></tr><tr><th colspan="4">Run Admin Tests 1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">io.cucumber.skeleton.RunCucumberTest</td><td><a href="#m2">runScenario</a></td><td rowspan="2">1680985045486</td><td rowspan="2">2216</td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr></tbody>
 </table>
-<h2>Run Admin Tests 1</h2><h3 id="m0">io.cucumber.skeleton.RunCucumberTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;1) WEB Ürün Detay Video Konumlandırması (VA-187)&quot;</td><td>&quot;WEB VA BOARD - UI Web&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Run Admin Tests 1</h2><h3 id="m0">io.cucumber.skeleton.RunCucumberTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;2) WEB Fittest,Kişisel Tavsiye- URL&apos;lere Parametre Eklenmesi - SUPPLEMENTLER / VITAMINLER (VA-194)&quot;</td><td>&quot;WEB VA BOARD - UI Web&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.RuntimeException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Kişisel Tavsiye&apos;)]&quot;}
+  (Session info: headless chrome=111.0.5563.146)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;Erdi-Arf.local&apos;, ip: &apos;fe80:0:0:0:448:488e:24fb:8d68%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21a5c512496854f0ea45580c8fc419fc, findElement {using=xpath, value=//span[contains(text(),&apos;Kişisel Tavsiye&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/yv/b6knxd_j5lv...}, goog:chromeOptions: {debuggerAddress: localhost:56471}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56471/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21a5c512496854f0ea45580c8fc419fc
+	at supplementler.listener.SeleniumListener.onException(SeleniumListener.java:142)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy43.onException(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:108)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:195)
+	at base.AutomationMethods.waitForIntervalsAndClick(AutomationMethods.java:80)
+	at base.AutomationMethods.click(AutomationMethods.java:59)
+	at io.cucumber.skeleton.StepDefinitionsHomePage.clickFITTEST(StepDefinitionsHomePage.java:31)
+	at ✽.click TEST(file:///Users/erdioran/IdeaProjects2/supplementler_web_automation/src/test/resources/io/cucumber/features/web_case.feature:16)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Kişisel Tavsiye&apos;)]&quot;}
+  (Session info: headless chrome=111.0.5563.146)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;Erdi-Arf.local&apos;, ip: &apos;fe80:0:0:0:448:488e:24fb:8d68%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21a5c512496854f0ea45580c8fc419fc, findElement {using=xpath, value=//span[contains(text(),&apos;Kişisel Tavsiye&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/yv/b6knxd_j5lv...}, goog:chromeOptions: {debuggerAddress: localhost:56471}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56471/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21a5c512496854f0ea45580c8fc419fc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:106)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:195)
+	at base.AutomationMethods.waitForIntervalsAndClick(AutomationMethods.java:80)
+	at base.AutomationMethods.click(AutomationMethods.java:59)
+	at io.cucumber.skeleton.StepDefinitionsHomePage.clickFITTEST(StepDefinitionsHomePage.java:31)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">io.cucumber.skeleton.RunCucumberTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;2) WEB Fittest,Kişisel Tavsiye- URL&apos;lere Parametre Eklenmesi - SUPPLEMENTLER / VITAMINLER (VA-194)&quot;</td><td>&quot;WEB VA BOARD - UI Web&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.RuntimeException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Kişisel Tavsiye&apos;)]&quot;}
+  (Session info: headless chrome=111.0.5563.146)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;Erdi-Arf.local&apos;, ip: &apos;fe80:0:0:0:448:488e:24fb:8d68%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [049e37f9818b1e72bc3446da9dfc27f0, findElement {using=xpath, value=//span[contains(text(),&apos;Kişisel Tavsiye&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/yv/b6knxd_j5lv...}, goog:chromeOptions: {debuggerAddress: localhost:56270}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56270/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 049e37f9818b1e72bc3446da9dfc27f0
+	at supplementler.listener.SeleniumListener.onException(SeleniumListener.java:142)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:85)
+	at jdk.proxy2/jdk.proxy2.$Proxy43.onException(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:108)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:195)
+	at base.AutomationMethods.waitForIntervalsAndClick(AutomationMethods.java:80)
+	at base.AutomationMethods.click(AutomationMethods.java:59)
+	at io.cucumber.skeleton.StepDefinitionsHomePage.clickFITTEST(StepDefinitionsHomePage.java:31)
+	at ✽.click TEST(file:///Users/erdioran/IdeaProjects2/supplementler_web_automation/src/test/resources/io/cucumber/features/web_case.feature:16)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Kişisel Tavsiye&apos;)]&quot;}
+  (Session info: headless chrome=111.0.5563.146)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;Erdi-Arf.local&apos;, ip: &apos;fe80:0:0:0:448:488e:24fb:8d68%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [049e37f9818b1e72bc3446da9dfc27f0, findElement {using=xpath, value=//span[contains(text(),&apos;Kişisel Tavsiye&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/yv/b6knxd_j5lv...}, goog:chromeOptions: {debuggerAddress: localhost:56270}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56270/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 049e37f9818b1e72bc3446da9dfc27f0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:106)
+	at jdk.proxy2/jdk.proxy2.$Proxy44.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:195)
+	at base.AutomationMethods.waitForIntervalsAndClick(AutomationMethods.java:80)
+	at base.AutomationMethods.click(AutomationMethods.java:59)
+	at io.cucumber.skeleton.StepDefinitionsHomePage.clickFITTEST(StepDefinitionsHomePage.java:31)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">io.cucumber.skeleton.RunCucumberTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;2) WEB Fittest,Kişisel Tavsiye- URL&apos;lere Parametre Eklenmesi - SUPPLEMENTLER / VITAMINLER (VA-194)&quot;</td><td>&quot;WEB VA BOARD - UI Web&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">io.cucumber.skeleton.RunCucumberTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;1) WEB Ürün Detay Video Konumlandırması (VA-187)&quot;</td><td>&quot;WEB VA BOARD - UI Web&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

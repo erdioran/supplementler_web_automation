@@ -10,7 +10,7 @@ Feature: WEB VA BOARD - UI Web
       | fitmoda | productYoutubeVideo |
 
 
-  @WEB @REGRESSION @HOME
+  @WEB @REGRESSION @test
   Scenario Outline: 2) WEB Fittest,Kişisel Tavsiye- URL'lere Parametre Eklenmesi - SUPPLEMENTLER / VITAMINLER (VA-194)
     Given load home page in "<base>"
     When click TEST
@@ -134,7 +134,7 @@ Feature: WEB VA BOARD - UI Web
     And delete discount "<name>"
 
     Examples:
-      | base          | type        | page       | name                 | discountType | code  | customerID | adet | productID      | type2  | url                   |
+      | base          | type        | page       | name                | discountType | code  | customerID | adet | productID      | type2  | url                   |
       | supplementler | User22Admin | İndirimler | TestİndirimFiyat    | fiyat        | false | customer13 | 2    | supplementler1 | User13 | indirimSupplementler1 |
       | supplementler | User22Admin | İndirimler | TestİndirimYüzdelik | yüzdelik     | false | customer14 | 2    | supplementler2 | User14 | indirimSupplementler2 |
 
@@ -224,7 +224,6 @@ Feature: WEB VA BOARD - UI Web
     Examples:
       | base          | category                 |
       | supplementler | Sağlıklı Atıştırmalıklar |
-
 
 
   @WEB @REGRESSION @PRODUCT_DETAIL_LP

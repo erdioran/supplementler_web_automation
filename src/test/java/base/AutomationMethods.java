@@ -57,6 +57,7 @@ public class AutomationMethods {
         // by ile gönderilen elemente clickler
 
         waitForIntervalsAndClick(by, 1, ConfigManager.getExplicitWaitTime());
+
     }
 
 
