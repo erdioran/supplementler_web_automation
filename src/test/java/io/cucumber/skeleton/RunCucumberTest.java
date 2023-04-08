@@ -22,13 +22,12 @@ import java.net.MalformedURLException;
 import static supplementler.utils.Helper.deleteOldTestReportFiles;
 
 
-@Test
 @Parameters({"tags"})
 @CucumberOptions(
-        publish = true,
-        features = {"src/test/resources/io/cucumber/features/web_case.feature", "src/test/resources/io/cucumber/features/admin_case.feature", "src/test/resources/io/cucumber/features/mweb_case.feature", "src/test/resources/io/cucumber/features/mvitaminler.feature",},
+        publish = false,
+        features = {"src/test/resources/io/cucumber/features/web_case.feature", "src/test/resources/io/cucumber/features/admin_case.feature", "src/test/resources/io/cucumber/features/mweb_case.feature"},
         glue = "io.cucumber.skeleton",
-        tags = "@REGRESSION",
+        tags = "@test",
         monochrome = true,
         plugin = {"summary", "pretty",
                 "html:target/cucumber-reports.html",

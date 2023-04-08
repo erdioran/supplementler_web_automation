@@ -1,6 +1,7 @@
 
 ## Run 
-terminal -> mvn clean install && allure serve allure-results
+terminal -> mvn clean install && 
+report -> cd allure-results -> allure serve allure-results
 
 
 RunCucumberTest class -> tags ->

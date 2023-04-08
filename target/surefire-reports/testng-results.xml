@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-08T12:12:39 TRT" name="Supplementler UI Test Suite" finished-at="2023-04-08T12:12:42 TRT" duration-ms="2538">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-04-08T12:12:39 TRT" name="Run Admin Tests 1" finished-at="2023-04-08T12:12:42 TRT" duration-ms="2538">
+      <class name="io.cucumber.skeleton.RunCucumberTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" started-at="2023-04-08T12:12:39 TRT" name="beforeSuite" finished-at="2023-04-08T12:12:39 TRT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTestReport()[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" started-at="2023-04-08T12:12:39 TRT" name="beforeTestReport" finished-at="2023-04-08T12:12:39 TRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestReport -->
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" started-at="2023-04-08T12:12:39 TRT" name="setUpClass" finished-at="2023-04-08T12:12:40 TRT" duration-ms="321" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@73173f63]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="startBrowser(org.testng.ITestResult,java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" started-at="2023-04-08T12:12:40 TRT" name="startBrowser" finished-at="2023-04-08T12:12:41 TRT" duration-ms="842" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@73173f63]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" started-at="2023-04-08T12:12:41 TRT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-08T12:12:42 TRT" duration-ms="1215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["1) WEB Ürün Detay Video Konumlandırması (VA-187)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WEB VA BOARD - UI Web"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" started-at="2023-04-08T12:12:42 TRT" name="closeBrowser" finished-at="2023-04-08T12:12:42 TRT" duration-ms="113" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=runScenario status=SUCCESS method=AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" started-at="2023-04-08T12:12:42 TRT" name="tearDownClass" finished-at="2023-04-08T12:12:42 TRT" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="afterTestReport()[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" started-at="2023-04-08T12:12:42 TRT" name="afterTestReport" finished-at="2023-04-08T12:12:42 TRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestReport -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:io.cucumber.skeleton.RunCucumberTest@79c7532f]" started-at="2023-04-08T12:12:42 TRT" name="afterSuite" finished-at="2023-04-08T12:12:42 TRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- io.cucumber.skeleton.RunCucumberTest -->
+    </test> <!-- Run Admin Tests 1 -->
+  </suite> <!-- Supplementler UI Test Suite -->
+</testng-results>

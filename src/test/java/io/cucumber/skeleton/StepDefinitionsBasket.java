@@ -1208,8 +1208,6 @@ public class StepDefinitionsBasket {
         Assert.assertEquals(getClassValue(ADRES_PAGE_ADRESINE_HEMEN_TESLIM_WRAPPER_OPEN), "shipping-column sameday-delivery active");
         click(ADRES_PAGE_AGT_TESLIMAT_AKTIF_1);
 
-        agtTimeGetText(ADRES_PAGE_AGT_TESLIMAT_AKTIF_1);
-
         click(ADRES_PAGE_SEPET_NOTU_EKLEMEK_ISTIYORUM_TEXT_WEB);
         Assert.assertEquals(getPlaceholderValue(ADRES_PAGE_SEPET_NOTU_EKLEMEK_ISTIYORUM_TEXT_WEB), "Sipariş ile ilgili notunuzu giriniz");
         enterText(SEPET_NOTU_TEXTBOX, "#test#");

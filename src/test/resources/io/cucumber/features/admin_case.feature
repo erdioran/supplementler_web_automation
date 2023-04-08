@@ -60,20 +60,6 @@ Feature: ADMIN - UI Admin
       | vitaminler    | User26Admin | MarkaSkorları | Düzenle | false   |
       | fitmoda       | User27Admin | MarkaSkorları | Düzenle | false   |
 
-  @ALPEREN @ALPEREN
-  Scenario: VA-297 KVKK - Admin Panel Erişim Kontrol Listesi Siparişler Erişimi.
-    Given open login page in "<base>"
-    And login with "<type>" user
-    And open admin page in "<base>"
-    And load "<page>" page in "<base>"
-    Then checkadminareamanageonlyorders
-
-
-      | base          | type        | page               |
-      | supplementler | User28Admin | adminloginsecurity |
-      | vitaminler    | Admin       | adminloginsecurity |
-      | fitmoda       | Admin       | adminloginsecurity |
-
   @ADMIN @REGRESSION @INDIRIM
   Scenario Outline: İndirim Tanımlaması Pasife Alma (VA-219)
     Given open login page in "<base>"

@@ -335,85 +335,6 @@ public class ProjectMethods extends AutomationMethods {
         }
     }
 
-    public static void plusCountInCard(int seq, int num) {
-        // MWEB için, sepette, seq değeri için hangi sıradaki ürünün, num değeri ile kaç adet arttırlacağını belirler.
-
-        String urlCheck = checkStore(getTabUrl());
-
-        By element = null;
-        By activeCount = null;
-        if (urlCheck.equals("supplementler") || urlCheck.equals("vitaminler")) {
-            if (elementVisibiltyWithSize(By.xpath("/html/body/div[2]/div[4]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/span"))) {
-                element = By.xpath("/html/body/div[2]/div[4]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/a[2]");
-                activeCount = By.xpath("/html/body/div[2]/div[4]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/span");
-                for (int i = 1; i <= num; i++) {
-                    click(element);
-                }
-                Assert.assertEquals(getText(activeCount), num);
-                LOGGER.info("Ürün adeti: " + seq + " olarak güncellendi.");
-            } else {
-                LOGGER.info(seq + ". ürün hediye. Adet değiştirilemedi.");
-                storeData("quantity" + seq, 1);
-            }
-
-        } else if (urlCheck.equals("fitmoda")) {
-            if (elementVisibiltyWithSize(By.xpath("/html/body/div[2]/div[3]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/span"))) {
-                element = By.xpath("/html/body/div[2]/div[3]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/a[2]");
-                activeCount = By.xpath("/html/body/div[2]/div[3]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/span");
-                for (int i = 1; i <= num; i++) {
-                    click(element);
-                }
-                Assert.assertEquals(getText(activeCount), num);
-                LOGGER.info("Ürün adeti: " + seq + " olarak güncellendi.");
-            } else {
-                LOGGER.info(seq + ". ürün hediye. Adet değiştirilemedi.");
-                storeData("quantity" + seq, 1);
-            }
-
-        }
-    }
-
-
-    public static void minusCountInCard(int seq, int num) {
-        // MWEB için, sepette, seq değeri için hangi sıradaki ürünün, num değeri ile kaç adet azaltılacağını belirler.
-
-        String urlCheck = checkStore(getTabUrl());
-
-        By element = null;
-        By activeCount = null;
-        if (urlCheck.equals("supplementler") || urlCheck.equals("vitaminler")) {
-            if (elementVisibiltyWithSize(By.xpath("/html/body/div[2]/div[4]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/span"))) {
-                element = By.xpath("/html/body/div[2]/div[4]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/a[1]");
-                activeCount = By.xpath("/html/body/div[2]/div[4]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/span");
-                int activeCountSize = Integer.parseInt(getText(activeCount));
-                for (int i = activeCountSize; i == num; i--) {
-                    click(element);
-                }
-                Assert.assertEquals(getText(activeCount), num);
-                LOGGER.info("Ürün adeti: " + seq + " olarak güncellendi.");
-            } else {
-                LOGGER.info(seq + ". ürün hediye. Adet değiştirilemedi.");
-                storeData("quantity" + seq, 1);
-            }
-
-        } else if (urlCheck.equals("fitmoda")) {
-            if (elementVisibiltyWithSize(By.xpath("/html/body/div[2]/div[3]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div"))) {
-                element = By.xpath("/html/body/div[2]/div[3]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div/a[1]");
-                activeCount = By.xpath("/html/body/div[2]/div[3]/div[1]/div[3]/form/div[1]/div[" + seq + "]/div[2]/div[2]/div[2]/div/div");
-                int activeCountSize = Integer.parseInt(getText(activeCount));
-                for (int i = activeCountSize; i == num; i--) {
-                    click(element);
-                }
-                Assert.assertEquals(getText(activeCount), num);
-                LOGGER.info("Ürün adeti: " + seq + " olarak güncellendi.");
-            } else {
-                LOGGER.info(seq + ". ürün hediye. Adet değiştirilemedi.");
-                storeData("quantity" + seq, 1);
-            }
-
-        }
-    }
-
     public static void krediKartiSecenegiFieldCheck() {
         // MWEB chekout V2 kapsamında, ödeme sayfası kredi kartı seçeneğinde, tüm alanları kontrol eder.
         String urlCheck = checkStore(getTabUrl());
@@ -483,25 +404,6 @@ public class ProjectMethods extends AutomationMethods {
 
     }
 
-
-    //    public static void krediKartiSecenegiFieldCheckWeb() {
-//        // WEB chekout V2 kapsamında, ödeme sayfası kredi kartı seçeneğinde, tüm alanları kontrol eder.
-//        String urlCheck = checkStore(getTabUrl());
-//
-//        Assert.assertTrue(elementVisibiltyWithSize(ODEME_PAGE_KART_UZERINDEKI_ISIM_SOYISIM_TEXT_WEB));
-//        Assert.assertTrue(elementVisibiltyWithSize(ODEME_PAGE_KART_NUMARASI_TEXT_WEB));
-//        Assert.assertTrue(elementVisibiltyWithSize(ODEME_PAGE_KART_SON_KULLANMA_TARIHI_TEXT_WEB));
-//        Assert.assertTrue(elementVisibiltyWithSize(ODEME_PAGE_KART_GUVENLIK_KODU_TEXT_WEB));
-//        Assert.assertEquals(getText(ODEME_PAGE_KART_TAKSIT_SECENEKLERI_KART_BILGILERINI_GIRDIKTEN_TEXT_WEB), "Taksit Seçenekleri kart bilgilerini girdikten sonra görüntülenecektir.");
-//        Assert.assertEquals(getText(ODEME_PAGE_KREDI_KARTINI_KAYDET_FIELD), "Kredi kartı bilgilerimi sonraki alışverişler için kaydetmek istiyorum");
-//        Assert.assertEquals(getText(ODEME_PAGE_KART_3D_SECURE_KULLAN), "3D Secure kullan");
-//        Assert.assertEquals(getText(ODEME_PAGE_SOZLESME_ONAY_WEB), "Ön Bilgilendirme Formu’nu ve Mesafeli Satış Sözleşmesi’ni okudum ve kabul ediyorum.");
-//
-//        Assert.assertFalse(elementVisibilty(ODEME_PAGE_KREDI_KARTI_TAKSIT_SECENEKLERI_TEXT_WEB));
-//        Assert.assertFalse(elementVisibilty(ODEME_PAGE_KREDI_KARTI_TAKSIT_SECENEKLERI_FIELD_WEB));
-//
-//
-//    }
     public static void krediKartiEnterText(String adSoyad, String kartNo, String ay, String yil, String cvv) {
         // Mweb ödeme sayfası kredi kartı seçenğinde, alanları doldurur.
 
@@ -732,14 +634,6 @@ public class ProjectMethods extends AutomationMethods {
 
 
     }
-
-
-    public static void agtTimeGetText(By by) {
-
-        LOGGER.info(getText(ADRES_PAGE_AGT_TESLIMAT_AKTIF_1));
-        secilenAGT = getText(ADRES_PAGE_AGT_TESLIMAT_AKTIF_1);
-    }
-
 
     public static void siparisAlindiPageCheckWeb() {
         // WEB sipariş alındı sayfasında, havale yöntemi için alanları test eder.
@@ -1294,43 +1188,6 @@ public class ProjectMethods extends AutomationMethods {
         LOGGER.info("Tutar: " + tutar);
         return tutar;
     }
-
-
-    public void updateTheQuantityOfTheProductInTheCartAs(int seq, int num) {
-        boolean urlCheck = checkStringContains(getTabUrl(), "fitmoda");
-        By element;
-        int sequence = seq * 2;
-        if (!urlCheck) {
-            if (elementVisibiltyWithSize(By.xpath("//body/div[9]/div/form/div/div[1]/div[2]/div[" + sequence + "]/div[3]/span/input"))) {
-                element = By.xpath("//body/div[9]/div/form/div/div[1]/div[2]/div[" + sequence + "]/div[3]/span/input");
-                click(element);
-                DriverManager.getDriver().findElement(element).clear();
-                enterText(element, String.valueOf(num));
-                DriverManager.getDriver().findElement(element).sendKeys(Keys.RETURN);
-                Assert.assertEquals(getProductQuantityInBasket(element), Integer.toString(seq));
-                storeData("quantity" + seq, seq);
-            } else {
-                LOGGER.info(seq + ". ürün hediye. Adet değiştirilemedi.");
-                storeData("quantity" + seq, 1);
-            }
-
-        } else {
-            if (elementVisibiltyWithSize(By.xpath("/html/body/div[7]/div[3]/form/div/div[1]/div[2]/div[" + sequence + "]/div[3]/span/input"))) {
-                element = By.xpath("/html/body/div[7]/div[3]/form/div/div[1]/div[2]/div[" + sequence + "]/div[3]/span/input");
-                click(element);
-                DriverManager.getDriver().findElement(element).clear();
-                enterText(element, String.valueOf(num));
-                DriverManager.getDriver().findElement(element).sendKeys(Keys.RETURN);
-                Assert.assertEquals(getProductQuantityInBasket(element), Integer.toString(seq));
-                storeData("quantity" + seq, seq);
-            } else {
-                LOGGER.info(seq + ". ürün hediye. Adet değiştirilemedi.");
-                storeData("quantity" + seq, 1);
-            }
-
-        }
-    }
-
 
     public static int productListPageCategoryProductCount() {
         int total = 0;

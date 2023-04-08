@@ -1,6 +1,6 @@
 Feature: WEB VA BOARD - UI Web
 
-  @WEB @REGRESSION @PRODUCT_DETAIL
+  @WEB @REGRESSION @PRODUCT_DETAIL @test
   Scenario Outline: 1) WEB Ürün Detay Video Konumlandırması (VA-187)
     Given load "<url>" url in "<base>"
     Then check video location
@@ -153,7 +153,7 @@ Feature: WEB VA BOARD - UI Web
       | fitmoda       | 1     | Fitness Ekipmanları | User19 |
 
 
-  @WAIT @WAIT @GUNGOR
+  @WAIT @WAIT
   Scenario Outline: VA-124 - Web - Checkout V2 Geliştirmesi  - WEB tarafı - 3 Store
     Given open login page in "<base>"
     And login with "<type>" user
@@ -319,7 +319,7 @@ Feature: WEB VA BOARD - UI Web
       | supplementler |
       | vitaminler    |
 
-  @WEB @REGRESSION @PRODUCT_LIST1
+  @WEB @REGRESSION @PRODUCT_LIST
   Scenario Outline: Stokta Olmayan Ürünler İçin Fiyat Gösterilmemesi (VA-320) (Kombinasyon) OK
     Given load home page in "<base>"
     And open the combinations page
