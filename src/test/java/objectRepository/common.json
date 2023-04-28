@@ -1,0 +1,9 @@
+{
+  "USER_NAME_INFO": {
+    "value": "//ul[@role='menu']//div[@class='user-profile-info']//div//span[contains(text(),'Erdi Oran')]",
+    "type": "xpath"
+  }
+}
+
+
+
