@@ -1,0 +1,17 @@
+{
+  "EMAIL_TEXTBOX": {
+    "value": "email",
+    "type": "id"
+  },
+  "PASSWORD_TEXTBOX": {
+    "value": "password",
+    "type": "id"
+  },
+  "LOGIN_BUTTON": {
+    "value": "button",
+    "type": "tagName"
+  }
+}
+
+
+

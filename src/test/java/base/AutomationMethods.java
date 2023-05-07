@@ -17,6 +17,7 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 import static objectRepository.ProductListOR.URUN_LISTELEME_PAGER_NUMBER;
+import static supplementler.utils.ElementManager.*;
 
 
 public class AutomationMethods {
@@ -28,21 +29,18 @@ public class AutomationMethods {
         return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
     }
 
-    public static void enterText(By by, String textToEnter) {
-        // by ile gönderilen elemente önce clickler, sonra texttoEnter stringini buraya girer.
 
-        WebElement element = findObject(by);
-        element.clear();
-        element.sendKeys(textToEnter);
+    public static void enterText(String element, String textToEnter) throws Exception {
+        WebElement webElement = findObject(returnElement(element));
+        webElement.clear();
+        webElement.sendKeys(textToEnter);
     }
 
-    public static String getText(By by) {
-        // by ile gönderilen elemntin text'ini döndürür.
-
-        return findObject(by).getText().trim();
+    public static String getText(String element) throws Exception {
+        return findObject(returnElement(element)).getText().trim();
     }
 
-    public static WebElement findObject(By by) {
+    public static WebElement findObject(By by) throws Exception {
         FluentWait<WebDriver> wait = getFluentWait();
         return wait.until(ExpectedConditions.elementToBeClickable(by));
     }
@@ -53,15 +51,12 @@ public class AutomationMethods {
     }
 
 
-    public static void click(By by) {
-        // by ile gönderilen elemente clickler
-
-        waitForIntervalsAndClick(by, 1, ConfigManager.getExplicitWaitTime());
-
+    public static void click(String element) throws Exception {
+        waitForIntervalsAndClick(returnElement(element), 1, ConfigManager.getExplicitWaitTime());
     }
 
 
-    public static void waitForIntervalsAndClick(By by, int interval, int maxWait) {
+    public static void waitForIntervalsAndClick(By by, int interval, int maxWait) throws Exception {
         boolean elementExists = false;
         int counter = 0;
         while (counter <= maxWait) {
@@ -95,7 +90,6 @@ public class AutomationMethods {
     public static FluentWait<WebDriver> getFluentWait() {
         return getFluentWait(1, ConfigManager.getExplicitWaitTime());
     }
-
     public static void switchToTab() {
         // açık olan diğer taba geçer.
 

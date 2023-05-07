@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="supplementler_web_automation" target="1.8" />
+      <module name="supplementler_web_automation" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>

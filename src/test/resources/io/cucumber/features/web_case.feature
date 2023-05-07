@@ -18,7 +18,7 @@ Feature: WEB VA BOARD - UI Web
     And check tab url is "<url>" in "<base>"
 
     Examples:
-      | base          | url              |
+      | base          | url             |
       | supplementler | /?fittest        |
       | vitaminler    | /?kisiseltavsiye |
 
