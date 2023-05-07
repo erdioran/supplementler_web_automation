@@ -1188,6 +1188,8 @@ public class StepDefinitionsBasket {
         Assert.assertFalse(getClassValue(ODEME_PAGE_KREDI_KARTI_SECENEK_WRAPPER_WEB).contains("selected")); // KREDI KARTI ALANI KAPANDI
 
 
+
+
     }
 
 
